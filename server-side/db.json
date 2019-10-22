@@ -1,3 +1,14 @@
 {
-    "streams": []
+  "streams": [
+    {
+      "title": "First Stream",
+      "description": "to test create api ",
+      "id": 1
+    },
+    {
+      "description": "pubg live",
+      "title": "Pubg live",
+      "id": 2
+    }
+  ]
 }
