@@ -5,21 +5,23 @@ import GoogleAuth from './GoogleAuth'
 
 function Header() {
     return (
-        <header className='navbar navbar-inverse'>
+        <nav className='navbar navbar-expand-sm bg-dark navbar-dark'>
             <div className='container-fluid'>
                 <div className="navbar-header">
-                    <Link className="navbar-brand" to="/">Twitchy</Link>
+                    <Link className="navbar-brand" to="/"><h1>Twitchy</h1></Link>
                 </div>
-
-                <ul className="nav navbar-nav">
-                    <li className='active'><Link to='/'>Home</Link></li>
+                
+                <ul className="navbar-nav">
+                    <li className='nav-item active'><Link to='/'>Home</Link></li>
+                    <li className='nav-item'><Link to='/'>Home</Link></li>
+                    <li className='nav-item'><Link to='/'>Home</Link></li>
                 </ul>
 
                 <ul className="nav navbar-nav navbar-right">
                     <li><Link to="/"><GoogleAuth/></Link></li>
                 </ul>
             </div>
-        </header>
+        </nav>
     )
 }
 
