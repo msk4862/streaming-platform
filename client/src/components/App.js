@@ -16,12 +16,13 @@ function App() {
             <Router history={history}>
                 <div>
                     <Header/>
+                    {/* id is Wildcard navigation (can put anything intead of id string)*/}
                     <div className='ui container'>
                         <Route path='/' exact component={StreamList} />
-                        <Route path='/streams/show' exact component={StreamShow} />
+                        <Route path='/streams/show/:id' exact component={StreamShow} />
                         <Route path='/streams/new' exact component={StreamCreate} />
-                        <Route path='/streams/edit' exact component={StreamEdit} />
-                        <Route path='/streams/delete' exact component={StreamDelete} /> 
+                        <Route path='/streams/edit/:id' exact component={StreamEdit} />
+                        <Route path='/streams/delete/:id' exact component={StreamDelete} /> 
                     </div>
                     
                 </div>

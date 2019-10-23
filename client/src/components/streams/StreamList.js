@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 import { fetchStreams } from '../../actions'
 
@@ -13,8 +14,10 @@ class StreamList extends React.Component {
         if(this.props.currentUserId  === stream.userId) {
             return (
                 <div className='col-md-4 offset-9'>
-                    <button className='btn btn-primary col-sm-4 mr-2'>EDIT</button>
-                    <button className='btn btn-danger col-sm-4'>DELETE</button>
+                    <Link to={`/streams/edit/${stream.id}`} className='btn btn-primary col-sm-4 mr-2'>
+                        Edit
+                    </Link>
+                    <button className='btn btn-danger col-sm-4'>Delete</button>
                 </div>
             )
         }
