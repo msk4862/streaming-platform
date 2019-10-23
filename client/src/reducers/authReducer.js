@@ -11,7 +11,7 @@ export default (state = INITIAL_STATE, action) => {
             return { ...state, isSignedIn: true, userId: action.payload}
 
         case SIGN_OUT:
-            return { ...state, isSignedIn: false}
+            return { ...state, isSignedIn: false, userId: null}
 
         default:
             return state

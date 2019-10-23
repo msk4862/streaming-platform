@@ -11,19 +11,19 @@ export default (state = {}, action) => {
     switch(action.type) {
         case CREATE_STREAM:
             // const newState = {...state}
-            // newState[action.id] = action.payload
+            // newState[action.payload.id] = action.payload
             // return {newState}
 
             //OR
 
-            return {...state, [action.id]: action.payload}
+            return {...state, [action.payload.id]: action.payload}
         
         
         case EDIT_STREAM:
-                return {...state, [action.id]: action.payload}
+                return {...state, [action.payload.id]: action.payload}
 
         case FETCH_STREAM:
-                return {...state, [action.id]: action.payload}
+                return {...state, [action.payload.id]: action.payload}
         
         /* mapKeys converts array to object taking second argument as a key*/ 
         case FETCH_STREAMS:
