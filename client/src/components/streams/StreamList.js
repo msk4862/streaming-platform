@@ -17,7 +17,9 @@ class StreamList extends React.Component {
                     <Link to={`/streams/edit/${stream.id}`} className='btn btn-primary col-sm-4 mr-2'>
                         Edit
                     </Link>
-                    <button className='btn btn-danger col-sm-4'>Delete</button>
+                    <Link to={`/streams/delete/${stream.id}`} className='btn btn-danger col-sm-4 mr-2'>
+                        Delete
+                    </Link>
                 </div>
             )
         }

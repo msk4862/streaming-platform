@@ -1,6 +1,6 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-
+import { Link } from 'react-router-dom'
 
 class StreamForm extends React.Component {
 
@@ -48,7 +48,8 @@ class StreamForm extends React.Component {
                 <Field name='title' component={this.renderInput} label='Enter Title: '/>
                 <Field name='description' component={this.renderInput} label='Enter Description: '/>
 
-                <button type='submit' className='btn btn-primary'>SUBMIT</button>
+                <button type='submit' className='btn btn-primary'>Submit</button>
+                <Link to='/' className='ml-2 btn btn-secondary'>Cancel</Link>
             </form>
         )
     }
