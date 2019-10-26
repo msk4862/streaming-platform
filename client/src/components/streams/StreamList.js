@@ -31,7 +31,7 @@ class StreamList extends React.Component {
                 <div key={stream.id} className="row item">
                     <img className="ui avatar image" src="../../../images/48.jpg" alt='stream_img'/>
                     <div className="col-md-7 mr-auto content">
-                        <div className="header">{stream.title}</div>
+                        <Link to={`/streams/${stream.id}`} className="header">{stream.title}</Link>
                         <div className='description'>{stream.description}</div>
                     </div>
                     {this.renderAdmin(stream)}
