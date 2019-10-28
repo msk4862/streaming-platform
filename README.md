@@ -1,4 +1,4 @@
-# Twitchy
+# :satellite: Twitchy :satellite:
 A simple streaming platform developed using React-Redux
 
 ## Getting Started
