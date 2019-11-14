@@ -1,11 +1,39 @@
 body {
     margin: 0px;
+    background-color: #393e46 !important;
+    color: #eeeeee;
 }
 
-.navbar {
+.headers {
+    color: #eeeeee;
+
+}
+
+nav.navbar {
     margin-bottom: 3%;
+    background-color: #222831 !important;
 }
 
+/*  StreamList  */
 .item {
     padding: 2% !important;
+}
+
+.item:after {
+    content: '';
+    height: 2px;
+    color: #eeeeee;
+}
+
+.ui.list {
+    margin-top: 2.5rem !important;
+}
+
+a.stream-header {
+    text-decoration: none !important;
+    color: #eeeeee !important;
+}
+
+div.item .content {
+    color: #eeeeee;
 }
