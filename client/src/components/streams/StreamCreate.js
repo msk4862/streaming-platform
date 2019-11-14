@@ -15,7 +15,7 @@ class StreamCreate extends React.Component {
         //console.log(this.props)
         return (
             <div className='container'>
-                <h3 className='mt-2 mb-auto'>Create new stream</h3>
+                <h3 className='mt-2 form-header'>Create new stream</h3>
                 <StreamForm onSubmit={this.onSubmit}/>
             </div>
         )

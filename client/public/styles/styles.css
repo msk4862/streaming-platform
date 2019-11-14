@@ -10,27 +10,24 @@ nav.navbar {
 }
 
 /*  StreamList  */
-.item {
-    padding: 2% !important;
-}
-
-.item:after {
-    content: '';
-    height: 2px;
-    color: #eeeeee;
+div.item {
+    padding: 2rem !important;
 }
 
 .ui.list {
     margin-top: 2.5rem !important;
 }
 
-a.stream-header, a.stream-header:hover{
+div.item .content a{
     text-decoration: none !important;
     color: #eeeeee !important;
 }
+div.item .content h3 > a{
+    color: #eeeeee !important;
+}
 
-div.item .content {
-    color: #eeeeee;
+div.item .content h3 > a {
+    color: #eeeeee !important;
 }
 
 
@@ -39,7 +36,12 @@ form label {
     color: #eeeeee;
 }
 
-div h3 {
+h3.form-header {
     color: #eeeeee;
-    margin-bottom: 2rem !important;
+    margin-bottom: 2rem;
+}
+
+/* SearchBar */
+input.prompt {
+    box-shadow: 10px 10px 5px #222831 !important;
 }
