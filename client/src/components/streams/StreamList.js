@@ -3,8 +3,15 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 import { fetchStreams } from '../../actions'
+import StreamSearchBar from './StreamSearchBar'
 
 class StreamList extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            searchTerm: ''
+        }
+    }
 
     componentDidMount() {
         this.props.fetchStreams()
@@ -25,14 +32,25 @@ class StreamList extends React.Component {
         }
     }
 
+    handleSearch = (searchTerm) => {
+        this.setState({
+            searchTerm: searchTerm
+        })
+    }
+
+
     renderStreamList() {
-        const list = this.props.streams.map(stream => {
+        const filteredlist = this.props.streams.filter(stream =>
+                stream.title.toLowerCase().includes(this.state.searchTerm.toLowerCase())
+        )
+
+        const list = filteredlist.map(stream => {
             return (
-                <div key={stream.id} className="row item">
-                    <img className="ui avatar image" src="../../../images/48.jpg" alt='stream_img'/>
-                    <div className="col-md-7 mr-auto content">
-                        <Link to={`/streams/${stream.id}`} className="header">{stream.title}</Link>
-                        <div className='description'>{stream.description}</div>
+                <div key={stream.id} className="row item col-12 col-sm-12">
+                    <img className="ui image" src="../../../images/pubg.jpg" alt='stream_img'/>
+                    <div className="col-md-7 ml-4 content">
+                        <h3><Link to={`/streams/${stream.id}`} className="stream-header">{stream.title}</Link></h3>
+                        <div>{stream.description}</div>
                     </div>
                     {this.renderAdmin(stream)}
                 </div>
@@ -46,8 +64,8 @@ class StreamList extends React.Component {
     render() {
         return (
             <div className='container'>
-                <h2 className='col-12 col-md-4'>STREAMS</h2>
-                <div className='ui celled list'>{this.renderStreamList()}</div>
+                <StreamSearchBar onSubmit={this.handleSearch}/>
+                <div className='ui list'>{this.renderStreamList()}</div>
             </div>
             
         )
