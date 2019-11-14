@@ -4,11 +4,6 @@ body {
     color: #eeeeee;
 }
 
-.headers {
-    color: #eeeeee;
-
-}
-
 nav.navbar {
     margin-bottom: 3%;
     background-color: #222831 !important;
@@ -29,11 +24,22 @@ nav.navbar {
     margin-top: 2.5rem !important;
 }
 
-a.stream-header {
+a.stream-header, a.stream-header:hover{
     text-decoration: none !important;
     color: #eeeeee !important;
 }
 
 div.item .content {
     color: #eeeeee;
+}
+
+
+/* StreamForm */
+form label {
+    color: #eeeeee;
+}
+
+div h3 {
+    color: #eeeeee;
+    margin-bottom: 2rem !important;
 }

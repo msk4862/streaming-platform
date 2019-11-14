@@ -47,7 +47,8 @@ class StreamList extends React.Component {
         const list = filteredlist.map(stream => {
             return (
                 <div key={stream.id} className="row item col-12 col-sm-12">
-                    <img className="ui image" src="../../../images/pubg.jpg" alt='stream_img'/>
+                    <img className="ui image" src="../../../images/pubg.jpg" alt='stream_img'
+                         style={{height:'150px', width: '250px'}}/>
                     <div className="col-md-7 ml-4 content">
                         <h3><Link to={`/streams/${stream.id}`} className="stream-header">{stream.title}</Link></h3>
                         <div>{stream.description}</div>
@@ -65,7 +66,7 @@ class StreamList extends React.Component {
         return (
             <div className='container'>
                 <StreamSearchBar onSubmit={this.handleSearch}/>
-                <div className='ui list'>{this.renderStreamList()}</div>
+                <div className='ui inverted divided list'>{this.renderStreamList()}</div>
             </div>
             
         )

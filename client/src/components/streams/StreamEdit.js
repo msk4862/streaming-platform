@@ -23,7 +23,7 @@ class StreamEdit extends React.Component {
         else {
             return (
                 <div className='container'>
-                    <h3 className='mt-2 mb-auto'>Edit stream</h3>
+                    <h3 className='mt-2'>Edit stream</h3>
                     <StreamForm
                         initialValues={{title: this.props.stream.title,
                                         description: this.props.stream.description}}
